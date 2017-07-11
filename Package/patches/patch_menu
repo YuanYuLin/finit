@@ -1,0 +1,11 @@
+{
+"COMMON":
+[
+{"enabled":1, "name": "0000-finit.c.patch" },
+{"enabled":1, "name": "0001-service.c.patch"},
+{"enabled":1, "name": "0002-plugins.zram.c.patch"},
+{"enabled":1, "name": "0003-plugins.Makefile.patch"},
+{"enabled":1, "name": "0004-plugins.dropbear.c.patch"},
+{"enabled":0, "name": ""}
+]
+}

@@ -1,0 +1,22 @@
+diff --Naur a/finit.c b/finit.c
+--- a/finit.c	2015-12-02 05:32:30.000000000 +0800
++++ b/finit.c	2017-07-03 12:29:14.545817615 +0800
+@@ -100,10 +100,18 @@
+ 	mount("none", "/proc", "proc", 0, NULL);
+ 	mount("none", "/proc/bus/usb", "usbfs", 0, NULL);
+ 	mount("none", "/sys", "sysfs", 0, NULL);
++	mount("none", "/tmp", "tmpfs", 0, NULL);
++	touch("/tmp/resolv.conf");
++	mount("none", "/dev", "devtmpfs", 0, NULL);
++        makedir("/cgroup", 0755);
++        mount("none", "/sys/fs/cgroup", "cgroup", 0, NULL);
+ 	makedir("/dev/pts", 0755);
+ 	makedir("/dev/shm", 0755);
++	makedir("/dev/mqueue", 0755);
++        mount("none", "/dev/mqueue", "mqueue", 0, NULL);
+ 	mount("none", "/dev/pts", "devpts", 0, "gid=5,mode=620");
+ 	mount("none", "/dev/shm", "tmpfs", 0, NULL);
++	mount("none", "/var", "tmpfs", 0, NULL);
+ 	umask(022);
+ 
+ 	/*

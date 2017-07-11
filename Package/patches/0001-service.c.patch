@@ -1,0 +1,15 @@
+diff --git a/service.c b/service.c
+index 16cadef..d986256 100644
+--- a/service.c
++++ b/service.c
+@@ -597,8 +597,8 @@ void service_runlevel(int newlevel)
+ 
+ 	if (runlevel == 1)
+ 		touch("/etc/nologin");	/* Disable login in single-user mode */
+-	else
+-		erase("/etc/nologin");
++	//else
++	//	erase("/etc/nologin");
+ 
+ 	/* No TTYs run at bootstrap, they have a delayed start. */
+ 	if (prevlevel > 0)

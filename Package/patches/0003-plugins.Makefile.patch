@@ -1,0 +1,12 @@
+diff -Naur a/plugins/Makefile b/plugins/Makefile
+--- a/plugins/Makefile	2015-10-26 06:35:14.000000000 +0800
++++ b/plugins/Makefile	2017-07-04 04:15:27.198998724 +0800
+@@ -8,7 +8,7 @@
+ ifneq ($(STATIC), 1)
+ PLUGINS    ?= initctl.so alsa-utils.so bootmisc.so dbus.so hwclock.so \
+ 	      resolvconf.so urandom.so x11-common.so tty.so time.so   \
+-	      netlink.so
++	      netlink.so zram.so dropbear.so
+ DEPS       := $(PLUGINS:.so=.d)
+ endif
+ 
