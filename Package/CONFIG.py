@@ -58,8 +58,8 @@ def MAIN_CONFIGURE(args):
     #extra_conf.append("--enable-rw-rootfs")
     extra_conf.append("--disable-inetd")
     extra_conf.append("--enable-debug")
-    #extra_conf.append("--with-plugins=bootmisc netlink time urandom initctl zram dropbear")
-    extra_conf.append("--with-plugins=bootmisc netlink time urandom initctl")
+    extra_conf.append("--with-plugins=bootmisc netlink time urandom initctl zram dropbear")
+    #extra_conf.append("--with-plugins=bootmisc netlink time urandom initctl")
     iopc.configure(tarball_dir, extra_conf)
 
     return True
