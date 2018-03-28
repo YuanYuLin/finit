@@ -1,6 +1,5 @@
-diff --Naur a/finit.c b/finit.c
---- a/finit.c	2015-12-02 05:32:30.000000000 +0800
-+++ b/finit.c	2018-01-31 10:17:15.658409423 +0800
+--- finit.c.orig	2015-12-02 05:32:30.000000000 +0800
++++ finit.c	2018-01-30 22:11:43.371332265 +0800
 @@ -100,10 +100,23 @@
  	mount("none", "/proc", "proc", 0, NULL);
  	mount("none", "/proc/bus/usb", "usbfs", 0, NULL);
